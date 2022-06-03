@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes,Route } from 'react-router-dom';
+import MainPage from './MainPage';
+import Cart from './Cart';
+import Login from './Login';
+import SignUp from './SignUp';
+import { useState } from 'react';
+
+
+
 
 function App() {
+  const [checkLogin, setCheckLogin]=useState(false)
+  localStorage.allUser=JSON.stringify([{}]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path='/' element={<MainPage checkLogin={checkLogin}/>}></Route>
+        <Route path="/cart" element={<Cart/>}></Route>
+        <Route path="/login" element={<Login setCheckLogin={setCheckLogin}/>}></Route>
+        <Route path="/signup" element={<SignUp/>}></Route>
+
+      </Routes>
+      
+      
+      
     </div>
   );
 }
