@@ -1,13 +1,18 @@
 import { BiArrowBack } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import { useState,useEffect } from "react";
+import userEvent from "@testing-library/user-event";
 const Cart = () => {
     const [mainCart, setMainCart]= useState([])
     const [loading, setLoading]= useState(false)
     const [cartCount, setCartCount]= useState(0)
+    const [cartSumation, setCartSumation]= useState(0)
     useEffect(() => {              
-        
+        console.log("call use effect")
         getCart()
+        
+        
+        
         
         
         
@@ -16,15 +21,39 @@ const Cart = () => {
     }, [])
     
     function getCart(){
+        if(localStorage.cart){
+            cartSum()
             let cart = JSON.parse(localStorage.cart)
             setMainCart(cart)
             console.log(mainCart)
+            console.log(loading)
+            
             setLoading(true)
+            
+
+        }else{
+            alert("Cart is empty")
+        }
+            
+    }
+    const cartSum = () => {
+        console.log(" sum function triggered")
+        let priceArray = [];
+        for(let i=0;i<mainCart.length;i++){
+            priceArray.push(mainCart[i].price)
+        }        
+        setCartSumation(()=>{
+            let sum =priceArray.reduce((a, b) => a + b, 0);
+            return sum
+        })
+        setLoading(true)
+        console.log(cartSumation)
     }
     
     
     
     return <section className="cart-section">
+        {console.log("render item")}
         
         
         <div className="cart-items-list">
@@ -32,7 +61,9 @@ const Cart = () => {
               <button><BiArrowBack/></button>
               <h3>Cart</h3>
           </div>
-          {loading&&mainCart.map((item)=>{                
+          {loading&&mainCart.map((item)=>{ 
+              console.log(loading,mainCart)
+              console.log(cartSumation)                             
                 const{image,desc,price,id}=item
                 return <div key={id} className="cart-item">
               <div className="item-pic">
@@ -56,7 +87,7 @@ const Cart = () => {
             <h3>Cart Summary</h3>
             <div className="sub-total">
                 <p>Subtotal</p>
-                <p>$200</p>
+                <p>${cartSumation}</p>
             </div>
             
             <button>Checkout</button>

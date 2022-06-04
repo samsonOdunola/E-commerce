@@ -9,14 +9,24 @@ const MainPage = ({checkLogin}) => {
     const[cartDisplay, setCartDisplay]=useState(false)
     const[cartCount, setCartCount]=useState(0)
     const[cart, setCart]=useState([])
-    const[activeUser, setActiveUser]=useState("")
-    console.log(cartDisplay)    
-    let navigate = useNavigate();    
+    const[activeUser, setActiveUser]=useState("")        
+    let navigate = useNavigate(); 
+    
+    const getActiveUser=()=>{
+        if(localStorage.currentUser){
+            let user=JSON.parse(localStorage.currentUser);
+            setActiveUser(user)
+        }
+        
+    }
+    useEffect(()=>{
+        getActiveUser()
+    },[])
     
 
 
     const addtocart =(image,desc,price)=>{
-        if(checkLogin){
+        if(localStorage.currentUser){
             setActiveUser(JSON.parse(localStorage.currentUser))
             console.log(checkLogin)
              let newItem = {image,desc,price}

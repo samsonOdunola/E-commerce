@@ -11,13 +11,13 @@ import { useState } from 'react';
 
 function App() {
   const [checkLogin, setCheckLogin]=useState(false)
-  localStorage.allUser=JSON.stringify([{}]);
+  
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={<MainPage checkLogin={checkLogin}/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
-        <Route path="/login" element={<Login setCheckLogin={setCheckLogin}/>}></Route>
+        <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp/>}></Route>
 
       </Routes>
