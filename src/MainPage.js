@@ -21,7 +21,23 @@ const MainPage = ({checkLogin}) => {
     }
     useEffect(()=>{
         getActiveUser()
+        
     },[])
+    useEffect(()=>{
+        getCart()
+    },[])
+
+    const getCart=()=>{
+        if(localStorage.cart){
+            let cart=JSON.parse(localStorage.cart)
+            let count = 0
+             for(let i=0;i<cart.length;i++){
+                count += 1
+             }
+             setCartDisplay(true)
+             setCartCount(count)
+        }
+    }
     
 
 

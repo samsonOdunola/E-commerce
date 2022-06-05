@@ -25,6 +25,57 @@ nav ul li {
   font-size: 1.1vw;
   cursor: pointer;
 }
+nav .user{
+  position: relative;
+}
+nav .user .login{
+  text-decoration: none;
+  color:black;
+  
+}
+nav .user .login:hover{
+  color:#ff4848;
+}
+nav .user .dropdown-menu {
+  list-style-type: none;  
+  display: none;  
+  position: absolute;
+  margin-top: 1vh;
+  top: 100;
+  right: -50%;  
+  width: 10vw;
+  background: white;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  z-index: 1;
+  cursor:default;
+}
+nav .user:hover .dropdown-menu{
+  display: block;
+}
+.dropdown-menu li{
+  text-align: center;
+  font-size: 1.3vw;
+  margin:4% 1% 0% 1%;
+  padding:0;
+  border-bottom:1px solid rgb(85, 85, 85);
+}
+.dropdown-menu button{
+  width:100%;
+  font-size: inherit;
+  cursor:pointer;
+  background-color: transparent;
+  border-style:none;
+}
+.dropdown-menu button:hover{
+  background-color: rgb(85, 85, 85);
+  color:white;
+}
+.dropdown-menu li:hover{
+  color:#ff4848;
+}
+
 .cart-icon {
   font-size: 2vw;
 }

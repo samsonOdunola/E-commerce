@@ -11,7 +11,8 @@ const Login=()=>{
             let alluser=JSON.parse(localStorage.allUser);
         for (let i = 0; i < alluser.length; i++) {
             if(alluser[i].email===email && alluser[i].password===password){
-                localStorage.currentUser=JSON.stringify(alluser[i].firstName);                
+                localStorage.currentUser=JSON.stringify(alluser[i].firstName); 
+                localStorage.currentUserEmail=JSON.stringify(alluser[i].email);               
                 console.log(alluser[i].firstName);                
                 console.log(user)
                 console.log(alluser)

@@ -9,7 +9,7 @@ const FeaturedProducts = ({addtocart}) => {
                 return <div className="product-card" key={id}>                    
                     <img src={require(`${image}`)} alt="" />
                     <h4>{desc}</h4>
-                    <p>${price}</p>
+                    <p>₦ {price}</p>
                     <button className="add_to_cart_btn" onClick={()=>addtocart(image,desc,price)}>Add to cart</button>
                 </div>
             })}
