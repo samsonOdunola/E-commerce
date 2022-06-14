@@ -11,20 +11,30 @@ const SignUp = () => {
 
     const handleSubmit = (firstName,lastName,email,password) => {
         let newUser = {firstName,lastName,email,password}
+        if(firstName==="" || lastName==="" || email==="" || password===""){
+            alert("Please fill all the fields")
+        }else {
+            if(!localStorage.AllUser){
+            let finalAllUser=[] 
+            finalAllUser.push(newUser)
+            localStorage.AllUser=JSON.stringify(finalAllUser)
+            navigate("/login");
+           }else{
+            let finalAllUser=JSON.parse(localStorage.AllUser)            
+            finalAllUser.push(newUser)
+            localStorage.AllUser=JSON.stringify(finalAllUser)
+            navigate("/login");
+        }
+
+        }
+
         
-        setAllUser((oldState)=>{
-            let newAllUser = [...oldState,newUser]
-            localStorage.allUser=JSON.stringify(newAllUser);
-            console.log(allUser);
-            return newAllUser
-        });
+            
         
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setPassword("");
         
-        // navigate("/login");
+        
+        
+        
     }
 
     return <div className="login-container" >
@@ -32,8 +42,9 @@ const SignUp = () => {
         <input type="text" value={lastName} onChange={(e)=>{setLastName(e.target.value)}} placeholder="Last name"/><br/>
         <input type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}placeholder="Email"/><br/>
         <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder="Password"/><br/>
-        <button onClick={()=>handleSubmit(firstName,lastName,email,password)}>Signup</button>   
-        <Link to="/login">Login</Link>     
+        <button onClick={()=>handleSubmit(firstName,lastName,email,password)}>Signup</button>   <br />
+        <p>Have an account <Link to="/login">Sign Up</Link></p>
+            
     </div>;
 }
 

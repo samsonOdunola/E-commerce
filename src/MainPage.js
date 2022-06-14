@@ -57,7 +57,7 @@ const MainPage = ({checkLogin}) => {
             console.log(updatedCart)
             setCartCount(count)
             setCartDisplay(true)
-            //  alert("Item added to cart") 
+            alert("Item added to cart") 
 
         }else{                                  
             navigate("./login")

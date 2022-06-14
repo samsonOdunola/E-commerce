@@ -7,8 +7,8 @@ const Login=()=>{
 
     const handleLogin=(email,password)=>{
         let user={email,password}
-        if(localStorage.allUser){
-            let alluser=JSON.parse(localStorage.allUser);
+        if(localStorage.AllUser){
+            let alluser=JSON.parse(localStorage.AllUser);
         for (let i = 0; i < alluser.length; i++) {
             if(alluser[i].email===email && alluser[i].password===password){
                 localStorage.currentUser=JSON.stringify(alluser[i].firstName); 
@@ -36,7 +36,7 @@ const Login=()=>{
         <input type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder="Email"/><br/>
         <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder="Password"/><br/>
         <button onClick={()=>handleLogin(email,password)}>Login</button>
-        <Link className="signup" to="/signup"><p>Sign up</p></Link>
+        <Link className="signup" to="/signup"><p>Sign up if you dont have an accout</p></Link>
     </div>
 
 }

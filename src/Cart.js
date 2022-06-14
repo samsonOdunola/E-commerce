@@ -76,8 +76,8 @@ const Cart = () => {
     },
     
       
-    onClose: () => {alert("You are just one ste away from completing your purchase")
-                      },
+    onClose: () => {alert("You are just one ste away from completing your purchase")},
+                      
   }
     
     

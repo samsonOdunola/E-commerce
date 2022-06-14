@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.04149c91.css",
+    "main.js": "/static/js/main.e37c3604.js",
+    "static/media/image1.png": "/static/media/image1.5803117a0b8ba1cb6446.png",
+    "static/media/product-5.jpg": "/static/media/product-5.afcb7f8f871094c3cd9c.jpg",
+    "static/media/category-1.jpg": "/static/media/category-1.fc0e3aa3780d85f56082.jpg",
+    "static/media/product-4.jpg": "/static/media/product-4.b225ba3298161f4d207c.jpg",
+    "static/media/product-3.jpg": "/static/media/product-3.52df8efd95ada6fdb38a.jpg",
+    "static/media/product-10.jpg": "/static/media/product-10.f0246c2afd3577025b37.jpg",
+    "static/media/product-1.jpg": "/static/media/product-1.e05936f223ba90a97ce9.jpg",
+    "static/media/exclusive.png": "/static/media/exclusive.88481f6215493b2979a7.png",
+    "static/media/product-2.jpg": "/static/media/product-2.7e62a954384ddbbbd545.jpg",
+    "static/media/category-3.jpg": "/static/media/category-3.6f75d595f549ac9a9a0c.jpg",
+    "static/media/product-11.jpg": "/static/media/product-11.b68ca8f47a00b8541eef.jpg",
+    "static/media/product-6.jpg": "/static/media/product-6.d1d76a9949ec05a60966.jpg",
+    "static/media/product-9.jpg": "/static/media/product-9.8c1896b2666fedf56c24.jpg",
+    "static/media/category-2.jpg": "/static/media/category-2.26cbbc90c19e9cb65e1d.jpg",
+    "static/media/product-12.jpg": "/static/media/product-12.1d65447547a0d6bb7d19.jpg",
+    "static/media/product-7.jpg": "/static/media/product-7.d15b9e56e695c7596e39.jpg",
+    "static/media/gallery-1.jpg": "/static/media/gallery-1.ba8c47b081c3b5a8d69e.jpg",
+    "static/media/gallery-2.jpg": "/static/media/gallery-2.0fdd631b7e0d25dec688.jpg",
+    "static/media/gallery-3.jpg": "/static/media/gallery-3.3ce166c4b5e389233e72.jpg",
+    "static/media/product-8.jpg": "/static/media/product-8.9b4ff590c84036e2a787.jpg",
+    "static/media/gallery-4.jpg": "/static/media/gallery-4.5a12a26979238b6ae38d.jpg",
+    "service-worker.js": "/service-worker.js",
+    "static/media/user-2.png": "/static/media/user-2.814f3ba73efe10b34b02.png",
+    "static/media/user-1.png": "/static/media/user-1.b0b1409ccacb2fda0184.png",
+    "static/media/user-3.png": "/static/media/user-3.a547be21ac2b4285e138.png",
+    "static/media/buy-1.jpg": "/static/media/buy-1.ea07c17d608263ec7e99.jpg",
+    "static/media/buy-3.jpg": "/static/media/buy-3.db6c1363bd6e364441e9.jpg",
+    "static/media/buy-2.jpg": "/static/media/buy-2.d23b3369f507a850ced3.jpg",
+    "static/media/logo-godrej.png": "/static/media/logo-godrej.671beead879441c5b8f3.png",
+    "index.html": "/index.html",
+    "static/media/img-credit.txt": "/static/media/img-credit.3bfbb2bc2f1c88764553.txt",
+    "main.04149c91.css.map": "/static/css/main.04149c91.css.map",
+    "main.e37c3604.js.map": "/static/js/main.e37c3604.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04149c91.css",
+    "static/js/main.e37c3604.js"
+  ]
+}
