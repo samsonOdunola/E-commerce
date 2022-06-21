@@ -9,12 +9,13 @@ header {
   height: 100vh;
   background: radial-gradient(#fff, #ffd6d6);
 }
+.mobileonly {
+  display: none;
+}
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed;
-  width:90vw; */
 }
 nav ul {
   list-style-type: none;
@@ -25,59 +26,63 @@ nav ul li {
   font-size: 1.1vw;
   cursor: pointer;
 }
-nav .user{
+nav .user {
   position: relative;
 }
-nav .user .login{
+nav .user .login {
   text-decoration: none;
-  color:black;
-  
+  color: black;
 }
-nav .user .login:hover{
-  color:#ff4848;
+nav .user .login:hover {
+  color: #ff4848;
 }
 nav .user .dropdown-menu {
-  list-style-type: none;  
-  display: none;  
+  list-style-type: none;
+  display: none;
   position: absolute;
   margin-top: 1vh;
   top: 100;
-  right: -50%;  
+  right: -50%;
   width: 10vw;
   background: white;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   padding: 0;
   z-index: 1;
-  cursor:default;
+  cursor: default;
 }
-nav .user:hover .dropdown-menu{
+nav .user:hover .dropdown-menu {
   display: block;
 }
-.dropdown-menu li{
+.dropdown-menu li {
   text-align: center;
   font-size: 1.3vw;
-  margin:4% 1% 0% 1%;
-  padding:0;
-  border-bottom:1px solid rgb(85, 85, 85);
+  margin: 4% 1% 0% 1%;
+  padding: 0;
+  border-bottom: 1px solid rgb(85, 85, 85);
 }
-.dropdown-menu button{
-  width:100%;
+.dropdown-menu button {
+  width: 100%;
   font-size: inherit;
-  cursor:pointer;
+  cursor: pointer;
   background-color: transparent;
-  border-style:none;
+  border-style: none;
 }
-.dropdown-menu button:hover{
+.dropdown-menu button:hover {
   background-color: rgb(85, 85, 85);
-  color:white;
+  color: white;
 }
-.dropdown-menu li:hover{
-  color:#ff4848;
+.dropdown-menu li:hover {
+  color: #ff4848;
 }
 
 .cart-icon {
   font-size: 2vw;
+  text-decoration: none;
+}
+.cartlink {
+  text-decoration: none;
+  color: black;
 }
 nav ul .cart {
   position: relative;
@@ -278,38 +283,36 @@ nav ul .cart span {
   margin: 0 1vw;
 }
 /* Login page */
-.login-container {  
-  margin:20vh auto;  
-  width:fit-content;  
+.login-container {
+  margin: 20vh auto;
+  width: fit-content;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   background-color: hsl(0, 0%, 90%);
   padding: 3vw 1vw;
   border-radius: 10px;
 }
-.login-container input{
-  width:30vw;
+.login-container input {
+  width: 30vw;
   font-size: 1.3vw;
   margin-bottom: 1vw;
   border-radius: 5px;
-  padding:0.5vw;
+  padding: 0.5vw;
   outline: none;
-  border-style:none;
-  
+  border-style: none;
 }
-.login-container button{
-  font-size:1.3vw;
+.login-container button {
+  font-size: 1.3vw;
   background-color: #ff4848;
-  width:100%;
-  cursor:pointer;
+  width: 100%;
+  cursor: pointer;
   margin-top: 1vw;
-  font-weight:500 ;
+  font-weight: 500;
 }
-.login-container .signup p{
+.login-container .signup p {
   /* display: flex; */
   /* width:100%; */
   text-align: center;
   font-size: 1vw;
   margin-top: 1vw;
-  
 }
